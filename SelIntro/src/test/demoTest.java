@@ -10,7 +10,7 @@ public class demoTest {
 
 	public static void main(String args[]) {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\sai.vamala_wenable\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+				"C:\\Users\\SAI PRADEEP VAMALA\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 
 		// Locators: id, name, css selector, xpath, className, tagName, linkText
@@ -62,6 +62,6 @@ public class demoTest {
 		// Getting the text with parent child traverse of css selector
 		System.out.println(driver.findElement(By.cssSelector("form p")).getText());
 
-		driver.close();
+		//driver.close();
 	}
 }
