@@ -95,6 +95,6 @@ public class demoTest {
 		Assert.assertEquals(loginText, expectedText);
 		String userNameComparison = driver.findElement(By.cssSelector("div[class='login-container'] h2")).getText();
 		Assert.assertEquals(userNameComparison, "Hello " + userName + ",");
-		driver.close();
+		driver.quit();
 	}
 }
