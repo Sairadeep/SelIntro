@@ -13,8 +13,12 @@ public class LocatorsDemo {
 		// C:\Users\sai.vamala_wenable\Downloads\chromedriver-win64\chromedriver-win64
 		// To run the same code in firefox, just remove the chromeDriver() and put
 		// geckoDriver() <- Cross browser testing
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\SAI PRADEEP VAMALA\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+
+		// System.setProperty() -> can be excluded from selenium 4.6.0 as the "Selenium
+		// Manager" introduced will take care of it.
+		// System.setProperty("webdriver.chrome.driver",
+		// "C:\\Users\\SAI PRADEEP
+		// VAMALA\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		String userName = "Pradeep";
 		// Locators: id, name, css selector, xpath, className, tagName, linkText
@@ -82,7 +86,8 @@ public class LocatorsDemo {
 		// Single slash '/' is treated as a child element.
 		// Finding phone number element with xpath parent - child traverse
 		// (//form/input)[3] or //form/input[3]
-		// Grandparent - Parent - Child traverse //form//div/button[2] or //form/div/button[2]
+		// Grandparent - Parent - Child traverse //form//div/button[2] or
+		// //form/div/button[2]
 		driver.findElement(By.xpath("//form/input[3]")).sendKeys("9390005627");
 		// Selecting reset button with help of css selector
 		driver.findElement(By.cssSelector("button.reset-pwd-btn")).click();

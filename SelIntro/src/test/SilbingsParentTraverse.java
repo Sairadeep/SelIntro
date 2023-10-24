@@ -12,8 +12,12 @@ public class SilbingsParentTraverse {
 		// Relative Xpath: Relatively pointing to a particular location.
 		// starts with "//" => //header/div
 
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\SAI PRADEEP VAMALA\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+		// System.setProperty() -> can be excluded from selenium 4.6.0 as the "Selenium
+		// Manager" introduced will take care of it.
+
+		// System.setProperty("webdriver.chrome.driver",
+		// "C:\\Users\\SAI PRADEEP
+		// VAMALA\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 
