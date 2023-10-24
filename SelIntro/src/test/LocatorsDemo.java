@@ -10,6 +10,7 @@ public class LocatorsDemo {
 
 	public static void main(String args[]) throws InterruptedException {
 		// C:\Users\SAI PRADEEP VAMALA\Downloads\chromedriver-win64\chromedriver-win64
+		// C:\Users\sai.vamala_wenable\Downloads\chromedriver-win64\chromedriver-win64
 		// To run the same code in firefox, just remove the chromeDriver() and put
 		// geckoDriver() <- Cross browser testing
 		System.setProperty("webdriver.chrome.driver",
