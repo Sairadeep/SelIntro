@@ -18,7 +18,6 @@ public class DynamicDropdwn {
 		driver.findElement(
 				By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[contains(@value,'MAA')]"))
 				.click();
-
 		// Parent Child traverse mechanism ==> //parentTagName/childtagName
 		// Parent Child relationship mechanism ==> parentXpath<space>childXpath
 		driver.close();
