@@ -1,4 +1,4 @@
-package test;
+package introToSelenium;
 
 import java.util.List;
 import org.openqa.selenium.By;
