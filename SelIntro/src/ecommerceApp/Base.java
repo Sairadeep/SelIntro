@@ -1,7 +1,9 @@
 package ecommerceApp;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +15,20 @@ public class Base {
 	public static void main(String[] args) {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
+		// Implicit Wait of 5 seconds
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().window().maximize();
+		addProductToCart(driver);
+		driver.findElement(By.cssSelector("img[alt='Cart']")).click();
+		driver.findElement(By.xpath("//button[text()='PROCEED TO CHECKOUT']")).click();
+		driver.findElement(By.xpath("//*[contains(@placeholder,'promo')]")).sendKeys("rahulshettyacademy");
+		driver.findElement(By.cssSelector(".promoBtn")).click();
+		System.out.println(driver.findElement(By.className("promoInfo")).getText());
+	}
+
+	public static void addProductToCart(WebDriver driver) {
+		// Static keyword is used as we are directly calling this method without
+		// creating an object of the class.
 		int j = 0;
 		ArrayList<String> productsList = new ArrayList<String>();
 		productsList.add("Cucumber");
@@ -31,7 +46,7 @@ public class Base {
 			String splitFetchedProduct = fetchedProduct.split("-")[0].trim();
 			if (productsList.contains(splitFetchedProduct)) {
 				// Hence, we are able to click on 'Add To Cart' of the cucumber but we can't
-				// rely on text as it changes.
+				// rely on text as it changes dynamically.
 				// //div[@class='product-action'] //button[@type='button'] OR
 				// //div[@class='product-action']/button
 				j++;
