@@ -53,6 +53,6 @@ public class ExplicitAssignement {
 		driver.findElement(By.xpath("//*[@type='submit']")).click();
 		toWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@class,'alert')]")));
 		Assert.assertTrue(driver.findElement(By.xpath("//*[contains(@class,'alert')]")).isDisplayed());
-		driver.close(); 
+		driver.close();  
 	}
 }
