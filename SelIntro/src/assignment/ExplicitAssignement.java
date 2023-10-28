@@ -16,7 +16,7 @@ public class ExplicitAssignement {
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\sai.vamala_wenable\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(); 
 		driver.get("https://rahulshettyacademy.com/loginpagePractise/");
 		driver.manage().window().maximize();
 		String userName = "rahulshettyacademy";
